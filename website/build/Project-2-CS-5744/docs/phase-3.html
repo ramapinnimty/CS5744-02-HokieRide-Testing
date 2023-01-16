@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>User Interface Phase · CS 5744 - Project 2 - Test Plan for RideVT</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Build"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="User Interface Phase · CS 5744 - Project 2 - Test Plan for RideVT"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/"/><meta property="og:description" content="## Build"/><meta property="og:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Project-2-CS-5744/Project-2-CS-5744/js/scrollSpy.js"></script><link rel="stylesheet" href="/Project-2-CS-5744/Project-2-CS-5744/css/main.css"/><script src="/Project-2-CS-5744/Project-2-CS-5744/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Project-2-CS-5744/Project-2-CS-5744/"><img class="logo" src="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico" alt="CS 5744 - Project 2 - Test Plan for RideVT"/><h2 class="headerTitleWithLogo">CS 5744 - Project 2 - Test Plan for RideVT</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Test Procedures for Builds</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Scope</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix">Traceability Matrix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Plan</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/plan">Plan Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Procedures for Builds</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-1">Authentication/Security Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2">Data Persistence/ Manipulation Phase</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3">User Interface Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4">System Reliability Phase</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Validation Tests</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests">Validation Tests</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conclusion</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion">Conclusion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Full Text</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text">Full Text</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">User Interface Phase</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="build"></a><a href="#build" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build</h2>
+<p>The build for this phase consists of the design element DE-1 i.e. the Model-View-Controller element, more specifically the View element.</p>
+<h2><a class="anchor" aria-hidden="true" id="purpose"></a><a href="#purpose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purpose</h2>
+<p>The purpose of this phase is to ensure that all the fields, labels, buttons, and other elements on the screen work as expected. It ensures that all the views or pages in the application function as expected. It primarily involves testing different UI elements, if they are in their correct place as per the UX designs, they correctly respond to user inputs. Various UI functionalities like testing if the visibility (hide/show an element), disability (enable/disable input on particular element), etc. can be tested in this phase. UI testing involves testing the visual elements to verify that they are functioning according to requirements – in terms of functionality and performance. All the Functional Requirements (FR-1 to FR-20) that have some User interface involved with them would be tested under this phase.</p>
+<h2><a class="anchor" aria-hidden="true" id="test-cases"></a><a href="#test-cases" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test Cases</h2>
+<table>
+<thead>
+<tr><th>Test</th><th>Goal</th><th>Procedure &amp; Expected behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>3.1</td><td>Users (driver &amp; passenger) can view and enter their personal information on the sign up view.</td><td>In the Sign Up view, enter personal information in all fields i.e. name, email, password, major, academic standing, etc. On clicking the sign up button, the user is prompted to the login view according to their role to enter their email address and password.</td></tr>
+<tr><td>3.2</td><td>Users (driver &amp; passenger) can view and enter login details on the login view.</td><td>In the login view, enter the email and password (used when creating the profile). On clicking the login button, the user should be redirected to the Home View.</td></tr>
+<tr><td>3.3</td><td>Driver can fill up the ride information and add a ride through the Home View.</td><td>In the driver’s Home view, enter the pickup location, stopping points, end destination and other fields needed to create a ride. On clicking the Create Ride button, the user should be able to see the created ride with all the ride details.</td></tr>
+<tr><td>3.4</td><td>Driver can view all the requests from passengers along with their information and accept/reject a request on the Requests View.</td><td>In the driver’s Requests view, validate that all the requests from passengers are displayed in the expected format, along with all their information. Validate that on clicking the accept/reject button, the carpool requests gets accepted or denied.</td></tr>
+<tr><td>3.5</td><td>Driver can view new requests once they are available.</td><td>Validate that the Driver’s Requests view automatically refreshes once new requests are available and the passenger information gets displayed correctly.</td></tr>
+<tr><td>3.6</td><td>Driver can view the reservation details and the payment processing state on the Reservation View.</td><td>Validate that the reservation information gets correctly displayed - trip date, available seats in car, payment processing state for each passenger.</td></tr>
+<tr><td>3.7</td><td>Passenger can fill up the trip information and the price they are willing to pay on Home View.</td><td>In the passenger’s Home View, enter the source and destination of the trip, along with the luggage details and price they are willing to pay. After entering all the trip details, passenger is redirected to the Matches View.</td></tr>
+<tr><td>3.8</td><td>Passenger can view new matches once they are available.</td><td>Validate that the Passenger’s Matches view automatically refreshes once new matches are available and information about all the available trips gets displayed correctly.</td></tr>
+<tr><td>3.9</td><td>Passenger can sort all the available trips by distance to destination &amp; price range.</td><td>Validate that the available trips get sorted correctly on the basis of distance to destination &amp; price range.</td></tr>
+<tr><td>3.10</td><td>Passenger can see the Matches View as pending until the driver accepts the trip.</td><td>Validate that the Matches View stays pending until the driver accepts the trip on their end.</td></tr>
+<tr><td>3.11</td><td>Passenger can make a reservation for up to 30 days in advance of the trip.</td><td>Validate that the user can fill up the reservation details and make an advance payment to secure the seat.</td></tr>
+<tr><td>3.12</td><td>Passenger can view all the information for them to be able to meet the driver.</td><td>Make the payment to the driver. After the payment, ensure that the reservation is secured and the screen displays all the information for them to be able to meet the driver.</td></tr>
+<tr><td>3.13</td><td>Passenger &amp; driver can view the navigation information on the Map View.</td><td>On Map View, enter the source and destination of the trip, and validate if the total trip time and estimated time of arrival get displayed correctly. Validate that the driver and passenger are able to view the navigation information throughout the trip.</td></tr>
+<tr><td>3.14</td><td>Passenger can make a secure payment through the Payment View.</td><td>Accept the ride request from the driver’s end. Enter credit card details on the Payment View. Validate that an appropriate screen gets displayed when the payment is complete.</td></tr>
+<tr><td>3.15</td><td>Passenger and Driver can view a list of previous trips offered or taken.</td><td>Validate the user can see a list of their previous trips on the Trip History View. Validate that the view displays all of the collected data like pickup, drop-off points, passengers, luggage, driver information, etc.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="additional-software"></a><a href="#additional-software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Software</h2>
+<p>The User interface tests under this phase can be automated with the help of certain tools or software. Some automation tools like <strong>Selenium</strong> or <strong>Cypress</strong> can be used to automate the UI testing. Since tests can be written in any language under these frameworks and can be carried out under any underlying OS. The main challenge in User Interface testing is to deal with frequent changes in the UI and ensuring that all tests are adapted to the new changes.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2"><span class="arrow-prev">← </span><span>Data Persistence/ Manipulation Phase</span></a><a class="docs-next button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4"><span>System Reliability Phase</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#build">Build</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#test-cases">Test Cases</a></li><li><a href="#additional-software">Additional Software</a></li></ul></nav></div><footer class="nav-footer" id="footer"></footer></div></body></html>

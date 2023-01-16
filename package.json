@@ -1,0 +1,12 @@
+{
+  "name": "p_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d build -b main"
+  },
+  "author": "",
+  "license": "ISC"
+}

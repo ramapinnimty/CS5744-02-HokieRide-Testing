@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "examples": "docusaurus-examples",
+    "start": "docusaurus-start",
+    "build": "docusaurus-build",
+    "publish-gh-pages": "docusaurus-publish",
+    "predeploy": "npm run build",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "deploy": "npm run build && gh-pages -d build -b main"
+  },
+  "devDependencies": {
+    "docusaurus": "^1.14.0"
+  }
+}

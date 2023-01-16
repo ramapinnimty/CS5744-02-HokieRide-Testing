@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>System Reliability Phase · CS 5744 - Project 2 - Test Plan for RideVT</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Build"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="System Reliability Phase · CS 5744 - Project 2 - Test Plan for RideVT"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/"/><meta property="og:description" content="## Build"/><meta property="og:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Project-2-CS-5744/Project-2-CS-5744/js/scrollSpy.js"></script><link rel="stylesheet" href="/Project-2-CS-5744/Project-2-CS-5744/css/main.css"/><script src="/Project-2-CS-5744/Project-2-CS-5744/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Project-2-CS-5744/Project-2-CS-5744/"><img class="logo" src="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico" alt="CS 5744 - Project 2 - Test Plan for RideVT"/><h2 class="headerTitleWithLogo">CS 5744 - Project 2 - Test Plan for RideVT</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Test Procedures for Builds</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Scope</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix">Traceability Matrix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Plan</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/plan">Plan Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Procedures for Builds</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-1">Authentication/Security Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2">Data Persistence/ Manipulation Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3">User Interface Phase</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4">System Reliability Phase</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Validation Tests</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests">Validation Tests</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conclusion</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion">Conclusion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Full Text</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text">Full Text</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">System Reliability Phase</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="build"></a><a href="#build" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build</h2>
+<p>The build for this phase consists of both the design elements i.e. DE-1, DE-2.</p>
+<h2><a class="anchor" aria-hidden="true" id="purpose"></a><a href="#purpose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purpose</h2>
+<p>The purpose of this phase is to test all the non-functional requirements of the system. It tests all the aspects which are not tested in functional testing. It is intended to test the readiness of a system according to nonfunctional criteria that functional testing never takes into account. The purpose of this phase is to increase usability, efficiency, maintainability and portability of the product. Other major non functional requirements that would be tested in this phase include system security, scalability and extensibility and performance. All the Non Functional Requirements NFR-1 to NFR-10 would be tested under this phase except NFR-5, NFR-8, NFR-9, NFR-10.</p>
+<h2><a class="anchor" aria-hidden="true" id="test-cases"></a><a href="#test-cases" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test Cases</h2>
+<table>
+<thead>
+<tr><th>Test</th><th>Goal</th><th>Procedure &amp; Expected behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>4.1</td><td>Application loads in about 5 seconds once the user logs in.</td><td>Enter the email and password on the login page and validate that the Home View loads within 3 seconds.</td></tr>
+<tr><td>4.2</td><td>Application should be able to protect the privacy of the users and their personal information.</td><td>Perform vulnerability scans through automated software to scan a system against known vulnerability signatures. Perform penetration testing to simulate an attack from a malicious hacker. Ensure that the correct design pattern is followed such that security and privacy of user data is handled without affecting application performance. Ensure that passwords are encrypted and stored in a secure way. Ensure that payment services are secure through integration with external payment gateways.</td></tr>
+<tr><td>4.3</td><td>Application should be able to run on multiple operating systems.</td><td>Validate if the application runs properly on multiple operating systems including Android, IOS and desktop OS. Determine the look and feel of the application in the various browser types and various browser versions.</td></tr>
+<tr><td>4.4</td><td>Application should be extensible in order to incorporate any future changes.</td><td>Measure the level of effort required to add new features to the system. Perform regression on the existing features to ensure the new functionality does not break the existing one. Ensure that the right architecture is chosen during the design phase.</td></tr>
+<tr><td>4.5</td><td>Passengers should be able to see all available matches that are continuously updating.</td><td>Enter matching trip details for both driver and passenger, and validate if the Matches View updates with the newly available rides every time.</td></tr>
+<tr><td>4.6</td><td>Payment information should be kept confidential.</td><td>Validate that payment services are secure through integration with external payment gateways.</td></tr>
+<tr><td>4.7</td><td>Application performance is as expected under normal and expected conditions.</td><td>Validates that the system performs as expected when concurrent users access the application and get the expected response time.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="additional-software"></a><a href="#additional-software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Software</h2>
+<p>The System Reliability tests under this phase can be automated with the help of certain tools. <strong>JMeter</strong> can be used as a load testing tool for analyzing the performance of a variety of services, with a focus on web applications. <strong>Webserver Stress Tool</strong> can be used to evaluate whether the system’s performance is as expected when it is low on resources. An example for stress testing could be when multiple users are trying to perform the same transactions on the same data.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3"><span class="arrow-prev">← </span><span>User Interface Phase</span></a><a class="docs-next button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests"><span>Validation Tests</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#build">Build</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#test-cases">Test Cases</a></li><li><a href="#additional-software">Additional Software</a></li></ul></nav></div><footer class="nav-footer" id="footer"></footer></div></body></html>

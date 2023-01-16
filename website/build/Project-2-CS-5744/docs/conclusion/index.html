@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Conclusion · CS 5744 - Project 2 - Test Plan for RideVT</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="It is important to understand that not every possible testing situation can be covered. The plan&#x27;s strategy focuses on the key integrations between the two design elements that make up the RideVT system. The test plan should change as the system&#x27;s design and requirements are refined. This test plan offers a strong foundation for starting to implement testing strategies and plans that will improve the quality of the software."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Conclusion · CS 5744 - Project 2 - Test Plan for RideVT"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/"/><meta property="og:description" content="It is important to understand that not every possible testing situation can be covered. The plan&#x27;s strategy focuses on the key integrations between the two design elements that make up the RideVT system. The test plan should change as the system&#x27;s design and requirements are refined. This test plan offers a strong foundation for starting to implement testing strategies and plans that will improve the quality of the software."/><meta property="og:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Project-2-CS-5744/Project-2-CS-5744/js/scrollSpy.js"></script><link rel="stylesheet" href="/Project-2-CS-5744/Project-2-CS-5744/css/main.css"/><script src="/Project-2-CS-5744/Project-2-CS-5744/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Project-2-CS-5744/Project-2-CS-5744/"><img class="logo" src="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico" alt="CS 5744 - Project 2 - Test Plan for RideVT"/><h2 class="headerTitleWithLogo">CS 5744 - Project 2 - Test Plan for RideVT</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Conclusion</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Scope</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix">Traceability Matrix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Plan</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/plan">Plan Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Procedures for Builds</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-1">Authentication/Security Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2">Data Persistence/ Manipulation Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3">User Interface Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4">System Reliability Phase</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Validation Tests</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests">Validation Tests</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conclusion</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion">Conclusion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Full Text</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text">Full Text</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Conclusion</h1></header><article><div><span><p>It is important to understand that not every possible testing situation can be covered. The plan's strategy focuses on the key integrations between the two design elements that make up the RideVT system. The test plan should change as the system's design and requirements are refined. This test plan offers a strong foundation for starting to implement testing strategies and plans that will improve the quality of the software.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests"><span class="arrow-prev">← </span><span>Validation Tests</span></a><a class="docs-next button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text"><span>Full Text</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"></footer></div></body></html>

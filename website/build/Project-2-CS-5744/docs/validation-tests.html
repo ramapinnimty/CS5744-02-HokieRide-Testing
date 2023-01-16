@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Validation Tests · CS 5744 - Project 2 - Test Plan for RideVT</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Build"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Validation Tests · CS 5744 - Project 2 - Test Plan for RideVT"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/"/><meta property="og:description" content="## Build"/><meta property="og:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Project-2-CS-5744/Project-2-CS-5744/js/scrollSpy.js"></script><link rel="stylesheet" href="/Project-2-CS-5744/Project-2-CS-5744/css/main.css"/><script src="/Project-2-CS-5744/Project-2-CS-5744/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Project-2-CS-5744/Project-2-CS-5744/"><img class="logo" src="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico" alt="CS 5744 - Project 2 - Test Plan for RideVT"/><h2 class="headerTitleWithLogo">CS 5744 - Project 2 - Test Plan for RideVT</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Validation Tests</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Scope</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix">Traceability Matrix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Plan</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/plan">Plan Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Procedures for Builds</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-1">Authentication/Security Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2">Data Persistence/ Manipulation Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3">User Interface Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4">System Reliability Phase</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Validation Tests</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests">Validation Tests</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conclusion</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion">Conclusion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Full Text</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text">Full Text</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Validation Tests</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="build"></a><a href="#build" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build</h2>
+<p>The build for this phase consists of both the design elements i.e. DE-1, DE-2.</p>
+<h2><a class="anchor" aria-hidden="true" id="purpose"></a><a href="#purpose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purpose</h2>
+<p>The purpose of this build is to ensure that the software actually meets the requirements for the project. It can also be defined as a testing to validate that the product fulfills its intended use when deployed in an appropriate environment. The build consists of the entire system - meaning all modules or design elements of the system. Validation tests are organized around a traceability matrix (specified at the end), that maps the validation test cases to the requirements for the project. This build would involve various types of software testing – integration tests, system tests, user acceptance tests, regression tests, cross browser and cross device testing.</p>
+<h2><a class="anchor" aria-hidden="true" id="test-cases"></a><a href="#test-cases" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test Cases</h2>
+<table>
+<thead>
+<tr><th>Test</th><th>Goal</th><th>Procedure &amp; Expected behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Error message gets displayed when email and/or password fields are left blank on the login page.</td><td>Launch the URL for login view, leave both email and password fields (or either of them) blank. Validate that appropriate error message gets displayed to enter an email or or password.</td></tr>
+<tr><td>2</td><td>Error message gets displayed when the user enters an invalid email and/or password on the login page.</td><td>Launch the URL for login view - <br />I. enter correct email, incorrect password. <br />II. enter incorrect email, correct password. <br />III. enter incorrect email and password. Validate that error message gets displayed to enter the appropriate fields correctly.</td></tr>
+<tr><td>3</td><td>User is navigated to the next page, on entering valid email and password.</td><td>Launch the URL for login view - enter both email and password fields correctly. Validate that the user is navigated to the Home View.</td></tr>
+<tr><td>4</td><td>System should be protected from SQL injection attacks.</td><td>Within the application, wherever there is a free text entry, enter a SQL statement instead of normal text input. For example, in any input text box enter:  <strong>SELECT * FROM Users WHERE UserId = 105 OR 1=1;</strong> <br />Validate that it does not query the database and return records. Ensure that the user input is sanitized and unwanted characters and strings are filtered or escaped to prevent the injection of harmful codes into the system.</td></tr>
+<tr><td>5</td><td>System should gracefully handle bad data from external systems.</td><td>Send API request from the application to the payment gateway. When the payment gateway responds with bad data, the system should throw a user-friendly exception to the end user.</td></tr>
+<tr><td>6</td><td>System should enable easy communication between drivers and passengers. All workflows from every end user’s perspective should execute smoothly.</td><td>Validate that the entire ride booking or ride creation/acceptance workflows work smoothly for both the entities - drivers &amp; passengers. <br /> • Validate that Requests View should show updated ride requests from passengers, every time a new request is made. <br /> •   Validate that Matches View should show updated trips available list, every time a new trip matches with the passenger’s trip details. <br /> •  Validate that the entire payment workflow processes properly and is secured - the system should track if the passenger has successfully paid their dues to the driver and if the driver has successfully received the payment. <br /> • Validate that passenger and driver should be able to successfully add their trip details including trip times, source/destination points, drop-off/pick up points, luggage amount, expected payment details, etc. <br /> •  Validate that the Reservation requests are processed properly by the system and are secured. <br /> •   Validate that both users are able to view their trip histories with all their trip information. <br /> •    Validate that passenger and driver should be able to view correct and updated navigation information through integration with Google maps server. <br /> •  Validate that passengers are able to make trip requests successfully. <br /> •  Validate that drivers are able to view the incoming trip requests and accept/deny requests.</td></tr>
+<tr><td>7</td><td>System should meet all the non-functional requirements.</td><td>Validate that all the views of the system load within 3-5 seconds with no significant delays. <br />•    Validate that no system operation takes a significant amount of time. <br />•   Validate that all the exceptions thrown from the server are user friendly and easily understood by the user. <br />•    Validate that passed all the security tests by performing penetration tests and vulnerability scans. <br />•    Validate that new features can easily be added to the feature without taking significant effort to add them and such that the existing features do not break.  <br />•  Validate if the application runs properly on multiple operating systems and underlying hardware and different browsers. <br />• Trace out all the security loopholes in the system.</td></tr>
+<tr><td>8</td><td>All the user interfaces within the system should get displayed and updated in real time as expected.</td><td>Apart from the basic app functionality like ensuring all views are functioning as expected, validate that the UI does not have any visual bugs. For example <br /> I.    Misaligned texts or buttons. <br /> II. Overlapping images or texts. <br /> III.    Partially visible elements. <br />IV.   Responsive layout issues. For example, a table rendering correctly on the desktop browser but rendering incorrectly on a mobile browser.</td></tr>
+<tr><td>9</td><td>System should efficiently save, update and retrieve data from/to the database for the purpose of ride creation, ride booking and viewing of ride history.</td><td><br />• Validate that the passengers are able to create a trip request successfully. System should retrieve matching available trips from the database efficiently and display them to the passenger. <br />•   Validate that drivers are able to create a trip successfully. System should be able to retrieve all trip requests from passengers to the driver in real time.<br />•    Searching and sorting operations on data should be efficient - for example, sorting the available trips data on Matches View based on the distance to destination.<br />•   Validate that the system processes the payment transactions smoothly and securely.</td></tr>
+<tr><td>10</td><td>Perform User Acceptance tests (UAT) on the system.</td><td>UAT, or user acceptance testing, is the most important type of testing for any piece of software. The app's usage pattern and frequently visited areas are provided by UAT. This will be useful in choosing the app's future features.</td></tr>
+<tr><td>11</td><td>System should be scalable and be able to handle at least 34,000 users.</td><td>Performance testing must be conducted based on the predicted demand in order to ensure that the search, map loading time, and other transactions meet the performance requirements both during peak and off-peak loads.</td></tr>
+<tr><td>12</td><td>System should ensure data accuracy in multiple points.</td><td>The entire system should be checked to assure data accuracy. This will include the data of the passenger, driver, trip information, trip fares, the distance calculations, etc. The accuracy of every data displayed on the app needs to be verified for its correctness.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="additional-software"></a><a href="#additional-software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Software</h2>
+<p>The System Reliability tests under this phase can be automated with the help of certain tools. <strong>JMeter</strong> can be used as a load testing tool for analyzing the performance of a variety of services, with a focus on web applications. <strong>Webserver Stress Tool</strong> can be used to evaluate whether the system’s performance is as expected when it is low on resources. An example for stress testing could be when multiple users are trying to perform the same transactions on the same data.</p>
+<h2><a class="anchor" aria-hidden="true" id="traceability-matrix"></a><a href="#traceability-matrix" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Traceability Matrix</h2>
+<table>
+<thead>
+<tr><th>Test Number</th><th>Requirement ID</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>FR-1, FR-11</td></tr>
+<tr><td>2</td><td>FR-1, FR-11</td></tr>
+<tr><td>3</td><td>FR-1, FR-11</td></tr>
+<tr><td>4</td><td>FR-1, FR-2, FR-3, FR-4, FR-5, FR-6, FR-7, FR-9, FR-11, FR-12, FR-15, FR-18.<br />(All FRs where user can input any information through a text box).</td></tr>
+<tr><td>5</td><td>FR-9, FR-18, FR-19, FR-3, FR-4, FR-13, FR-14</td></tr>
+<tr><td>6</td><td>FR-1 to FR-20</td></tr>
+<tr><td>7</td><td>NFR-1 to NFR-10, except NFR-5, NFR-8, NFR-9, NFR-10</td></tr>
+<tr><td>8</td><td>FR-1 to FR-20 (all functional requirements that have some UI involved with them).</td></tr>
+<tr><td>9</td><td>FR-3 - FR-10, FR-13 - FR-20, NFR-6</td></tr>
+<tr><td>10</td><td>N/A (User Acceptance Testing)</td></tr>
+<tr><td>11</td><td>NFR-2</td></tr>
+<tr><td>12</td><td>FR-1 to FR-20</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4"><span class="arrow-prev">← </span><span>System Reliability Phase</span></a><a class="docs-next button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion"><span>Conclusion</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#build">Build</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#test-cases">Test Cases</a></li><li><a href="#additional-software">Additional Software</a></li><li><a href="#traceability-matrix">Traceability Matrix</a></li></ul></nav></div><footer class="nav-footer" id="footer"></footer></div></body></html>

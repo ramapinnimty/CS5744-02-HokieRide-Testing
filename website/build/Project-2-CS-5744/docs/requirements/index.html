@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Requirements · CS 5744 - Project 2 - Test Plan for RideVT</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This section details the scope of the requirements and design characteristics tested in each of the testing phases - (Authentication phase, Ride Booking phase - Location, Ride Booking phase - Details, Ride Booking phase - Payment, Ride History phase). We plan to cover most of the requirements both functional and non functional and leave out some of the requirements that are not fully operated or controllable by the current system since they are fully dependent on external services and systems that the software is connected to. The system consists of two major design modules - the MVC Module( Design element - 1 ), which will be referred to as DE-1, and the Client Server Module( Design element - 2 ) which will be referred to as DE-2 here on. Furthermore, there are modules in DE-1 within each layer of the MVC architecture. The model layer has - Driver, customer, vehicle, driver trip, passenger trip, payment models. The view layer has - Sign up and login view, Driver view (Home, requests, reservation), Passenger view (Home, matches, reservations), Map view, Payment view, Trip history view. Each of the requirements listed below is tested based on the DE and module it belongs to."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Requirements · CS 5744 - Project 2 - Test Plan for RideVT"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/"/><meta property="og:description" content="This section details the scope of the requirements and design characteristics tested in each of the testing phases - (Authentication phase, Ride Booking phase - Location, Ride Booking phase - Details, Ride Booking phase - Payment, Ride History phase). We plan to cover most of the requirements both functional and non functional and leave out some of the requirements that are not fully operated or controllable by the current system since they are fully dependent on external services and systems that the software is connected to. The system consists of two major design modules - the MVC Module( Design element - 1 ), which will be referred to as DE-1, and the Client Server Module( Design element - 2 ) which will be referred to as DE-2 here on. Furthermore, there are modules in DE-1 within each layer of the MVC architecture. The model layer has - Driver, customer, vehicle, driver trip, passenger trip, payment models. The view layer has - Sign up and login view, Driver view (Home, requests, reservation), Passenger view (Home, matches, reservations), Map view, Payment view, Trip history view. Each of the requirements listed below is tested based on the DE and module it belongs to."/><meta property="og:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mayurdhepe.github.io/Project-2-CS-5744/Project-2-CS-5744/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Project-2-CS-5744/Project-2-CS-5744/js/scrollSpy.js"></script><link rel="stylesheet" href="/Project-2-CS-5744/Project-2-CS-5744/css/main.css"/><script src="/Project-2-CS-5744/Project-2-CS-5744/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Project-2-CS-5744/Project-2-CS-5744/"><img class="logo" src="/Project-2-CS-5744/Project-2-CS-5744/img/favicon.ico" alt="CS 5744 - Project 2 - Test Plan for RideVT"/><h2 class="headerTitleWithLogo">CS 5744 - Project 2 - Test Plan for RideVT</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Test Scope</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Scope</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix">Traceability Matrix</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Plan</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/plan">Plan Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test Procedures for Builds</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-1">Authentication/Security Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-2">Data Persistence/ Manipulation Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-3">User Interface Phase</a></li><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/phase-4">System Reliability Phase</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Validation Tests</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/validation-tests">Validation Tests</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Conclusion</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/conclusion">Conclusion</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Full Text</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Project-2-CS-5744/Project-2-CS-5744/docs/full-text">Full Text</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Requirements</h1></header><article><div><span><p>This section details the scope of the requirements and design characteristics tested in each of the testing phases - (Authentication phase, Ride Booking phase - Location, Ride Booking phase - Details, Ride Booking phase - Payment, Ride History phase). We plan to cover most of the requirements both functional and non functional and leave out some of the requirements that are not fully operated or controllable by the current system since they are fully dependent on external services and systems that the software is connected to. The system consists of two major design modules - the MVC Module( Design element - 1 ), which will be referred to as DE-1, and the Client Server Module( Design element - 2 ) which will be referred to as DE-2 here on. Furthermore, there are modules in DE-1 within each layer of the MVC architecture. The model layer has - Driver, customer, vehicle, driver trip, passenger trip, payment models. The view layer has - Sign up and login view, Driver view (Home, requests, reservation), Passenger view (Home, matches, reservations), Map view, Payment view, Trip history view. Each of the requirements listed below is tested based on the DE and module it belongs to.</p>
+<h2><a class="anchor" aria-hidden="true" id="requirements-tested"></a><a href="#requirements-tested" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements Tested</h2>
+<h3><a class="anchor" aria-hidden="true" id="functional-requirements"></a><a href="#functional-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functional Requirements</h3>
+<h4><a class="anchor" aria-hidden="true" id="student-driver"></a><a href="#student-driver" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Student Driver</h4>
+<ul>
+<li><strong>FR-1</strong> -  The driver should be able to sign up for the VT ride-sharing system and successfully login to the system.</li>
+<li><strong>FR-2</strong> - The driver should be able to add their personal information - name, major, and academic standing.</li>
+<li><strong>FR-3</strong> - The driver should be able to add their pick-up point(s) and end destination.</li>
+<li><strong>FR-4</strong> - The driver should be able to add all the drop-off locations within the route to the end destination.</li>
+<li><strong>FR-5</strong> - The driver should be able to add the date and time of their trip.</li>
+<li><strong>FR-6</strong> - The driver should be able to set their list price for the trip.</li>
+<li><strong>FR-7</strong> - The driver should be able to add the number of seats and luggage capacity available for the trip.</li>
+<li><strong>FR-8</strong> - The driver should be able to view the passenger’s information and accept or deny their request for the ride.</li>
+<li><strong>FR-9</strong> - The driver should be able to add a payment method linked to their account (bank account, credit card, debit card)</li>
+<li><strong>FR-10</strong> - The driver should be able to see all their past ride history.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="student-passenger"></a><a href="#student-passenger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Student Passenger</h4>
+<ul>
+<li><strong>FR-11</strong> - The passenger should be able to sign up for the VT ride-sharing system and successfully log in to the system.</li>
+<li><strong>FR-12</strong> - The passenger should be able to add their personal information - name, major, and academic standing.</li>
+<li><strong>FR-13</strong> - The passenger should be able to sort all the available drivers by destination, drop-off points, and requested price.</li>
+<li><strong>FR-14</strong> - The passenger should be able to see the trip time.</li>
+<li><strong>FR-15</strong> - The passenger should be able to add the number of luggage(s) they would like to bring.</li>
+<li><strong>FR-16</strong> - The passenger should be able to view the driver’s information.</li>
+<li><strong>FR-17</strong> - The passenger should be able to request a ride from the driver.</li>
+<li><strong>FR-18</strong> - The passenger should be able to add a payment method linked to their account (bank account, credit card, debit card)</li>
+<li><strong>FR-19</strong> - The passenger should be able to make a successful payment to the driver.</li>
+<li><strong>FR-20</strong> - The passenger should be able to see all their past ride history.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="non-functional-requirements"></a><a href="#non-functional-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Non-functional requirements</h3>
+<ul>
+<li><strong>NR-1</strong> - The application should load in about 5 seconds and once the user logs in, the homepage of the application should load within 3 seconds.</li>
+<li><strong>NR-2</strong> - The application should be scalable and be able to handle at least 34,000 users (approximate current enrollment at VT).</li>
+<li><strong>NR-3</strong> - The application should be able to protect the privacy of the users and their personal information.</li>
+<li><strong>NR-4</strong> - The application should be able to run on multiple operating systems such as android and IOS as well as the desktop.</li>
+<li><strong>NR-6</strong> - Passengers should be able to see all available matches to drivers that update every time a trip that matches their preferences is posted.</li>
+<li><strong>NR-7</strong> - Payment information such as card details should be kept confidential.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="requirements-not-tested"></a><a href="#requirements-not-tested" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements not tested</h2>
+<h3><a class="anchor" aria-hidden="true" id="non-functional-requirements-1"></a><a href="#non-functional-requirements-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Non-functional requirements</h3>
+<ul>
+<li><strong>NR-5</strong> - The application should be extensible in order to incorporate any future changes in case any new features need to be added.</li>
+<li><strong>NR-8</strong> - The application should be able to offer quick response time through notifications since ride sharing can be time-sensitive at times.</li>
+<li><strong>NR-9</strong> - The application should be easily maintainable by the administrator in order to fix any bugs or run timely updates.</li>
+<li><strong>NR-10</strong> - The application should be available to use at any time of the day without any server downtime issues.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/Project-2-CS-5744/Project-2-CS-5744/docs/traceability-matrix"><span>Traceability Matrix</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requirements-tested">Requirements Tested</a><ul class="toc-headings"><li><a href="#functional-requirements">Functional Requirements</a></li><li><a href="#non-functional-requirements">Non-functional requirements</a></li></ul></li><li><a href="#requirements-not-tested">Requirements not tested</a><ul class="toc-headings"><li><a href="#non-functional-requirements-1">Non-functional requirements</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"></footer></div></body></html>
